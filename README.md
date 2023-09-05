@@ -12,7 +12,7 @@ But if you are a web manager with no programming experience, here are steps to u
 
    **Slider content**：By editing the content at approximately line 132 and 133, you can change the content on the slider picture.
 
-   **Introduction content**: The introduction content is at about line 192, change it to your introduction.
+   **Introduction content**: The introduction content is at approximately line 192, change it into your introduction.
 
 2. Research
 
