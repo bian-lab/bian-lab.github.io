@@ -42,32 +42,62 @@
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
-    <style type="text/css">
-        html,
+    <style>
         body {
             margin: 0;
-            padding: 0;
+            font: 13px/1.5 "Microsoft YaHei", "Helvetica Neue", "Sans-Serif";
+            min-height: 960px;
+            min-width: 600px;
         }
         
-        .iw_poi_title {
-            color: #CC5522;
+        .my-map {
+            margin: 0 auto;
+            width: 450px;
+            height: 400px;
+        }
+        
+        .my-map .icon {
+            background: url(https://a.amap.com/lbs-dev-yuntu/static/web/image/tools/creater/marker.png) no-repeat;
+        }
+        
+        .my-map .icon-cir {
+            height: 31px;
+            width: 28px;
+        }
+        
+        .my-map .icon-cir-green {
+            background-position: -11px -155px;
+        }
+        
+        .amap-container {
+            height: 100%;
+        }
+        
+        .myinfowindow {
+            width: 240px;
+            min-height: 50px;
+        }
+        
+        .myinfowindow h5 {
+            height: 20px;
+            line-height: 20px;
+            overflow: hidden;
             font-size: 14px;
             font-weight: bold;
-            overflow: hidden;
-            padding-right: 13px;
-            white-space: nowrap
+            width: 220px;
+            text-overflow: ellipsis;
+            word-break: break-all;
+            white-space: nowrap;
         }
         
-        .iw_poi_content {
-            font: 12px arial, sans-serif;
-            overflow: visible;
-            padding-top: 4px;
-            white-space: -moz-pre-wrap;
-            word-wrap: break-word
+        .myinfowindow div {
+            margin-top: 10px;
+            min-height: 40px;
+            line-height: 20px;
+            font-size: 13px;
+            color: #6f6f6f;
         }
     </style>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
-
 </head>
 
 <body id="body">
@@ -170,22 +200,25 @@ End Fixed Navigation
                     <hr/>
                     <h4>Email:</h4>
                     <a href="mailto: bianwenjie@westlake.edu.cn">Dr. Wenjie Bian</a><br/>
-                    <a href="mailto: dengweiyun@westlake.edu.cn">Lab Manager Weiyun Deng</a>
+                    <a href="mailto: dengweiyun@westlake.edu.cn">Lab manager Weiyun Deng</a>
                     <hr/>
                     <h4>Opportunity:</h4>
-                    <p>Dr. Wen-Jie Bian earned his bachelor’s degree in Biotechnology at Zhejiang University of Technology in 2008 and received his Ph.D. in Neurobiology at the Institute of Neuroscience, Chinese Academy of Sciences in 2016. From 2016 to
-                        2022, Dr. Bian did postdoctoral training with Prof. Luis de Lecea at the Department of Psychiatry and Behavioral Science, Stanford University School of Medicine, and was promoted to an instructor in 2022. His work on neural circuit
-                        development and sleep function was published in journals including Cell, Nature Neuroscience, Sleep, Neuroscience Bulletin, and Developmental Neurobiology. Dr. Bian has received awards and honors including the Excellent Doctoral
-                        Dissertation of Chinese Academy of Sciences, Society for Neuroscience Trainee Professional Development Award, Human Frontier Science Program Long-term Postdoctoral Fellowship, Brain & Behavior Research Foundation Young Investigator
-                        Award, Sleep Research Society Outstanding Early Investigator Award. In 2023, Dr. Bian joined Westlake University as a Principal Investigator and started the Laboratory of Sleep and Neural Development.</p>
+                    <p>
+                        We are actively recruiting research associates, research assistants, postdocs and Ph.D. students. If interested, please send your CV to
+                        <a href="mailto:bianwenjie@westlake.edu.cn">bianwenjie@westlake.edu.cn</a>
+                    </p>
                 </div>
                 <div class="col-md-5">
-                    <img loading="lazy" src="images/contact/contact_header.jpg" class="img-fluid" alt="">
+                    <!-- <img loading="lazy" src="images/contact/contact_header.jpg" class="img-fluid" alt=""> -->
                     <!--百度地图容器-->
-                    <!-- <h4>Map & Directions:</h4>
-                    <div style="width:450px;height:300px;border:#ccc solid 1px;" id="dituContent"></div>
-                    <p>Westlake University (Yunqi Campus)
-                        <br/> Room 3-602</p> -->
+                    <h4>Map & Directions:</h4>
+                    <div id="wrap" class="my-map">
+                        <div id="mapContainer"></div>
+                    </div>
+                    <br/>
+                    <p><b>Westlake University (Yunqi Campus)
+                        <br/> Room 3-602</b></p>
+
 
                 </div>
             </div>
@@ -253,118 +286,121 @@ End Fixed Navigation
     <!-- Custom js -->
     <script src="js/script.js"></script>
 
-    <script type="text/javascript">
-        //创建和初始化地图函数：
-        function initMap() {
-            createMap(); //创建地图
-            setMapEvent(); //设置地图事件
-            addMapControl(); //向地图添加控件
-            addMarker(); //向地图中添加marker
-        }
+    <script src="https://webapi.amap.com/maps?v=1.3&key=0a9ed88e0deecd2b736bd090c2d1a31b"></script>
+    <script>
+        ! function() {
+            var infoWindow, map, level = 16,
+                center = {
+                    lng: 120.080578,
+                    lat: 30.134607
+                },
+                features = [{
+                    "icon": "cir",
+                    "color": "green",
+                    "name": "Westlake University(Yunqi Campus)",
+                    "desc": "Shilongshan ST #18, Xihu District, Hangzhou, Zhejiang Province, CN",
+                    "lnglat": {
+                        "Q": 30.134606580333042,
+                        "R": 120.0805780832469,
+                        "lng": 120.080578,
+                        "lat": 30.134607
+                    },
+                    "offset": {
+                        "x": -9,
+                        "y": -31
+                    },
+                    "type": "Marker"
+                }];
 
-        //创建地图函数：
-        function createMap() {
-            var map = new BMap.Map("dituContent"); //在百度地图容器中创建一个地图
-            var point = new BMap.Point(120.08744, 30.140354); //定义一个中心点坐标
-            map.centerAndZoom(point, 17); //设定地图的中心点和坐标并将地图显示在地图容器中
-            window.map = map; //将map变量存储在全局
-        }
-
-        //地图事件设置函数：
-        function setMapEvent() {
-            map.enableDragging(); //启用地图拖拽事件，默认启用(可不写)
-            map.enableScrollWheelZoom(); //启用地图滚轮放大缩小
-            map.disableDoubleClickZoom(); //禁用鼠标双击放大
-            map.enableKeyboard(); //启用键盘上下左右键移动地图
-        }
-
-        //地图控件添加函数：
-        function addMapControl() {
-            //向地图中添加比例尺控件
-            var ctrl_sca = new BMap.ScaleControl({
-                anchor: BMAP_ANCHOR_BOTTOM_LEFT
-            });
-            map.addControl(ctrl_sca);
-        }
-
-        //标注点数组
-        var markerArr = [{
-            title: "Westlake&nbsp;University&nbsp;(Yunqi&nbsp;Campus)",
-            content: "Shilgshan&nbsp;ST&nbsp;#18,&nbsp;Xihu&nbsp;District,&nbsp;Hangzhou,&nbsp;Zhejiang&nbsp;Province,&nbsp;CN",
-            point: "120.087242|30.140557",
-            isOpen: 0,
-            icon: {
-                w: 21,
-                h: 21,
-                l: 0,
-                t: 0,
-                x: 6,
-                lb: 5
-            }
-        }];
-        //创建marker
-        function addMarker() {
-            for (var i = 0; i < markerArr.length; i++) {
-                var json = markerArr[i];
-                var p0 = json.point.split("|")[0];
-                var p1 = json.point.split("|")[1];
-                var point = new BMap.Point(p0, p1);
-                var iconImg = createIcon(json.icon);
-                var marker = new BMap.Marker(point, {
-                    icon: iconImg
-                });
-                var iw = createInfoWindow(i);
-                var label = new BMap.Label(json.title, {
-                    "offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20)
-                });
-                marker.setLabel(label);
-                map.addOverlay(marker);
-                label.setStyle({
-                    borderColor: "#808080",
-                    color: "#333",
-                    cursor: "pointer"
-                });
-
-                (function() {
-                    var index = i;
-                    var _iw = createInfoWindow(i);
-                    var _marker = marker;
-                    _marker.addEventListener("click", function() {
-                        this.openInfoWindow(_iw);
-                    });
-                    _iw.addEventListener("open", function() {
-                        _marker.getLabel().hide();
-                    })
-                    _iw.addEventListener("close", function() {
-                        _marker.getLabel().show();
-                    })
-                    label.addEventListener("click", function() {
-                        _marker.openInfoWindow(_iw);
-                    })
-                    if (!!json.isOpen) {
-                        label.hide();
-                        _marker.openInfoWindow(_iw);
+            function loadFeatures() {
+                for (var feature, data, i = 0, len = features.length, j, jl, path; i < len; i++) {
+                    data = features[i];
+                    switch (data.type) {
+                        case "Marker":
+                            feature = new AMap.Marker({
+                                map: map,
+                                position: new AMap.LngLat(data.lnglat.lng, data.lnglat.lat),
+                                zIndex: 3,
+                                extData: data,
+                                offset: new AMap.Pixel(data.offset.x, data.offset.y),
+                                title: data.name,
+                                content: '<div class="icon icon-' + data.icon + ' icon-' + data.icon + '-' + data.color + '"></div>'
+                            });
+                            break;
+                        case "Polyline":
+                            for (j = 0, jl = data.path.length, path = []; j < jl; j++) {
+                                path.push(new AMap.LngLat(data.path[j].lng, data.path[j].lat));
+                            }
+                            feature = new AMap.Polyline({
+                                map: map,
+                                path: path,
+                                extData: data,
+                                zIndex: 2,
+                                strokeWeight: data.strokeWeight,
+                                strokeColor: data.strokeColor,
+                                strokeOpacity: data.strokeOpacity
+                            });
+                            break;
+                        case "Polygon":
+                            for (j = 0, jl = data.path.length, path = []; j < jl; j++) {
+                                path.push(new AMap.LngLat(data.path[j].lng, data.path[j].lat));
+                            }
+                            feature = new AMap.Polygon({
+                                map: map,
+                                path: path,
+                                extData: data,
+                                zIndex: 1,
+                                strokeWeight: data.strokeWeight,
+                                strokeColor: data.strokeColor,
+                                strokeOpacity: data.strokeOpacity,
+                                fillColor: data.fillColor,
+                                fillOpacity: data.fillOpacity
+                            });
+                            break;
+                        default:
+                            feature = null;
                     }
-                })()
+                    if (feature) {
+                        AMap.event.addListener(feature, "click", mapFeatureClick);
+                    }
+                }
             }
-        }
-        //创建InfoWindow
-        function createInfoWindow(i) {
-            var json = markerArr[i];
-            var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>" + json.content + "</div>");
-            return iw;
-        }
-        //创建一个Icon
-        function createIcon(json) {
-            var icon = new BMap.Icon("http://map.baidu.com/image/us_mk_icon.png", new BMap.Size(json.w, json.h), {
-                imageOffset: new BMap.Size(-json.l, -json.t),
-                infoWindowOffset: new BMap.Size(json.lb + 5, 1),
-                offset: new BMap.Size(json.x, json.h)
-            })
-            return icon;
-        }
 
-        initMap(); //创建和初始化地图
+            function mapFeatureClick(e) {
+                if (!infoWindow) {
+                    infoWindow = new AMap.InfoWindow({
+                        autoMove: true,
+                        isCustom: false
+                    });
+                }
+                var extData = e.target.getExtData();
+                infoWindow.setContent("<div class='myinfowindow'><h5>" + extData.name + "</h5><div>" + extData.desc + "</div></div>");
+                infoWindow.open(map, e.lnglat);
+            }
+
+            map = new AMap.Map("mapContainer", {
+                center: new AMap.LngLat(center.lng, center.lat),
+                level: level,
+                doubleClickZoom: false
+            });
+
+            loadFeatures();
+
+            map.on('complete', function() {
+                map.plugin(["AMap.ToolBar", "AMap.OverView", "AMap.Scale"], function() {
+                    map.addControl(new AMap.ToolBar({
+                        ruler: false,
+                        direction: false,
+                        locate: false
+                    }));
+                    map.addControl(new AMap.OverView({
+                        isOpen: true
+                    }));
+                    map.addControl(new AMap.Scale);
+                });
+            })
+
+        }();
     </script>
 
 
