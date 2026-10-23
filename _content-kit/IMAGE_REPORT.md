@@ -4,23 +4,23 @@
 处理文件：64 个
 图片文件总数：108 个
 处理前合计：207.8 MB
-处理后这 64 个文件合计：35.4 MB
-images/ 当前合计：43.5 MB
+处理后这 64 个文件合计：33.4 MB
+images/ 当前合计：41.4 MB
 
 ## 最终检查
 
 - 全站文件 ≥25 MB：0 个
-- images/ 中最大文件：images/publication/publication_header.png，3.50 MB
+- images/ 中最大文件：images/news/20241122/2.png，2.19 MB
 - 所有图片均可被 Pillow 正常打开；原图已按用户要求覆盖，不另存副本。
 
 ## 处理后最大的 10 张图
 
 | 文件 | 大小 |
 | --- | ---: |
-| `images/publication/publication_header.png` | 3.50 MB |
 | `images/news/20241122/2.png` | 2.19 MB |
 | `images/gallery/science/3.png` | 2.01 MB |
 | `images/slider/slider-bg-4.jpg` | 1.55 MB |
+| `images/publication/publication_header.jpg` | 1.42 MB |
 | `images/contact/contact_header.jpg` | 1.35 MB |
 | `images/home/team_vertical.png` | 1.24 MB |
 | `images/gallery/art/wintersweet.png` | 1.18 MB |
@@ -41,7 +41,7 @@ images/ 当前合计：43.5 MB
 | `images/news/co_birthday_party.jpg` | 6000x4000 | 1800x1200 | 6.37 MB | 0.28 MB |
 | `images/news/20241024/1.jpg` | 4096x3072 | 1800x1350 | 5.70 MB | 0.52 MB |
 | `images/news/20241024/2.jpg` | 4096x3072 | 1800x1350 | 5.42 MB | 0.45 MB |
-| `images/publication/publication_header.png` | 4001x2252 | 2400x1351 | 4.93 MB | 3.50 MB |
+| `images/publication/publication_header.jpg` | 4001x2252 | 2400x1351 | 4.93 MB | 1.42 MB |
 | `images/news/20241122/2.png` | 2092x1177 | 1800x1013 | 4.88 MB | 2.19 MB |
 | `images/gallery/life/labout_20241017_1.jpg` | 5712x4284 | 1800x1350 | 4.63 MB | 0.25 MB |
 | `images/home/team_vertical_2025.jpg` | 6396x8528 | 1200x1600 | 4.15 MB | 0.14 MB |

@@ -84,10 +84,10 @@ Fixed Navigation
             <nav class="navbar navbar-expand-lg navbar-light px-0">
                 <!-- logo -->
                 <a class="navbar-brand logo" href="https://westlake.edu.cn">
-                    <img loading="lazy" class="logo-default" style="height: 44.8px;" src="../images/en_logo_black.png"
-                        alt="logo" />
-                    <img loading="lazy" class="logo-white" style="height: 44.8px;" src="../images/en_logo_white.png"
-                        alt="logo" />
+                    <img class="logo-default" style="height: 44.8px;" src="../images/en_logo_black.png"
+                        alt="logo" decoding="async" />
+                    <img class="logo-white" style="height: 44.8px;" src="../images/en_logo_white.png"
+                        alt="logo" decoding="async" />
 
                 </a>
 
@@ -141,7 +141,7 @@ Fixed Navigation
 End Fixed Navigation
 ==================================== -->
 
-    <section class="single-page-header" style="background-image: url('../images/team/yunyueli.jpg');">
+    <section class="single-page-header" data-bg="../images/team/yunyueli.jpg" style="background-image: none; background-color: #111;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -166,7 +166,7 @@ End Fixed Navigation
 
                 </div>
                 <div class="col-md-3 mb-4 mb-md-0">
-                    <img loading="lazy" src="../images/team/yunyueli.jpg" class="img-fluid" alt="">
+                    <img src="../images/team/yunyueli.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
                 </div>
             </div>
             <!-- End row -->
@@ -199,10 +199,10 @@ End Fixed Navigation
                     </div>
                     <div class="col-lg-4 col-md-4">
                         <a href="https://westlake.edu.cn"><img src="../images/en_logo_white.png" alt="logo"
-                                style="width: 215px" /></a>
+                                style="width: 215px" loading="lazy" decoding="async" /></a>
                         <hr />
                         <a href="https://sls.westlake.edu.cn"><img src="../images/en_life_science.png" alt="logo"
-                                style="width: 215px" /></a>
+                                style="width: 215px" loading="lazy" decoding="async" /></a>
                     </div>
 
                     <!-- End of .col-sm-3 -->
@@ -228,6 +228,9 @@ End Fixed Navigation
     Essential Scripts
     =====================================-->
     <!-- Main jQuery -->
+    <!-- Lazy background images -->
+    <script src="../js/lazy-bg.js"></script>
+
     <script src="../plugins/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap4 -->

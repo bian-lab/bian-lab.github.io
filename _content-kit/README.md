@@ -59,7 +59,8 @@ python _content-kit/check_site.py
 
 ## 已知风险（截至 2026-10）
 
-- **历史大图（已处理）**：2026-10 已批量生成网页尺寸并覆盖原图，所有站点文件 <25 MB；最大图片为 `images/publication/publication_header.png`（约 3.5 MB），其余照片多在 0.1–0.8 MB。
+- **历史大图（已处理）**：2026-10 已批量生成网页尺寸并覆盖原图，所有站点文件 <25 MB；最大图片为 `images/news/20241122/2.png`（约 2.19 MB），其余照片多在 0.1–1.42 MB。`publication_header` 已转为高质量 JPEG，约 1.42 MB。
+- **懒加载（2026-10）**：内容图片使用 `loading="lazy" decoding="async"`；首屏导航 logo 保持 eager。页面头部背景用 `data-bg`，非首屏 hero 用 `data-bg-deferred`，由 `js/lazy-bg.js` 按浏览器优先级加载，不做限速。
 - **AMap key**：`contact.html` 中的高德 JS API key 是公开可见的，需在 AMap 控制台配置域名白名单/配额；当前使用 1.3 旧版 API。按用户要求暂不改动。
 - **第三方计数器**：页脚使用 `easycounter.com`，可能被广告拦截器拦截，属于第三方请求。按用户要求暂不改动。
 - **模板残留**：部分图片 alt 为空、旧 Bootstrap/jQuery 版本、22 份重复导航；这些不影响当前布局，但维护成本较高。

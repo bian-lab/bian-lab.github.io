@@ -79,6 +79,18 @@ def main() -> int:
                 if target and target.exists() and target.suffix.lower() in IMAGE_EXT:
                     referenced_images[target] = rel
 
+        # Backgrounds deferred by js/lazy-bg.js.
+        for el in tree.xpath(".//*[@data-bg or @data-bg-deferred]"):
+            for attr in ("data-bg", "data-bg-deferred"):
+                value = (el.get(attr) or "").strip()
+                if not value:
+                    continue
+                target = local_target(page.parent, value)
+                if target is not None and not target.exists():
+                    errors.append(f"{rel}: missing local {attr} image {value!r}")
+                if target and target.exists() and target.suffix.lower() in IMAGE_EXT:
+                    referenced_images[target] = rel
+
         for img in tree.xpath(".//img"):
             src = (img.get("src") or "").strip()
             target = local_target(page.parent, src)

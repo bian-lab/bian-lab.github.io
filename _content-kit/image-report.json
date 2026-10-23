@@ -350,14 +350,14 @@
     "after_bytes": 700884
   },
   {
-    "path": "images/publication/publication_header.png",
-    "format": "PNG",
+    "path": "images/publication/publication_header.jpg",
+    "format": "JPEG",
     "before_bytes": 5171947,
     "before_size": "4001x2252",
     "after_size": "2400x1351",
     "max_edge": 2400,
-    "quality": 90,
-    "after_bytes": 3672178
+    "quality": 92,
+    "after_bytes": 1485100
   },
   {
     "path": "images/publication/Sleep paper GA.png",
