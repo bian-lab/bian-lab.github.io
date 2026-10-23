@@ -11,11 +11,22 @@
   /* ========================================================================= */
   /*	Page Preloader
   /* ========================================================================= */
-  $(window).on('load', function () {
+  var preloaderHidden = false;
+
+  function hidePreloader() {
+    if (preloaderHidden) {
+      return;
+    }
+    preloaderHidden = true;
     $('#preloader').fadeOut('slow', function () {
       $(this).remove();
     });
-  });
+  }
+
+  $(window).on('load', hidePreloader);
+
+  // Never leave the page hidden if a large image or third-party asset stalls.
+  setTimeout(hidePreloader, 5000);
 
 
   // navbarDropdown

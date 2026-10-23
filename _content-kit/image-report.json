@@ -1,0 +1,642 @@
+[
+  {
+    "path": "images/contact/contact_header.jpg",
+    "format": "JPEG",
+    "before_bytes": 3929955,
+    "before_size": "3648x2736",
+    "after_size": "3000x2250",
+    "max_edge": 3000,
+    "quality": 84,
+    "after_bytes": 1414777
+  },
+  {
+    "path": "images/gallery/art/wintersweet.png",
+    "format": "PNG",
+    "before_bytes": 1965109,
+    "before_size": "975x796",
+    "after_size": "975x796",
+    "max_edge": 1600,
+    "quality": 90,
+    "after_bytes": 1236388
+  },
+  {
+    "path": "images/gallery/life/20251123_biaoyi.jpg",
+    "format": "JPEG",
+    "before_bytes": 577990,
+    "before_size": "2918x1800",
+    "after_size": "1800x1110",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 222701
+  },
+  {
+    "path": "images/gallery/life/dawn.jpg",
+    "format": "JPEG",
+    "before_bytes": 1850381,
+    "before_size": "3648x2736",
+    "after_size": "1800x1350",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 221236
+  },
+  {
+    "path": "images/gallery/life/dawn_1.jpg",
+    "format": "JPEG",
+    "before_bytes": 1811028,
+    "before_size": "3648x2736",
+    "after_size": "1800x1350",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 207609
+  },
+  {
+    "path": "images/gallery/life/labout_20241017_1.jpg",
+    "format": "JPEG",
+    "before_bytes": 4851034,
+    "before_size": "5712x4284",
+    "after_size": "1800x1350",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 257484
+  },
+  {
+    "path": "images/gallery/life/labretreat_20241122.jpg",
+    "format": "JPEG",
+    "before_bytes": 2804404,
+    "before_size": "4096x2304",
+    "after_size": "1800x1013",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 381889
+  },
+  {
+    "path": "images/gallery/life/mouse_explorer.jpg",
+    "format": "JPEG",
+    "before_bytes": 2066823,
+    "before_size": "2736x3648",
+    "after_size": "1350x1800",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 198982
+  },
+  {
+    "path": "images/gallery/life/team.jpg",
+    "format": "JPEG",
+    "before_bytes": 9697234,
+    "before_size": "4032x3024",
+    "after_size": "1800x1350",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 801683
+  },
+  {
+    "path": "images/gallery/life/team_20231013_1.jpg",
+    "format": "JPEG",
+    "before_bytes": 2674679,
+    "before_size": "4032x3024",
+    "after_size": "1350x1800",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 484576
+  },
+  {
+    "path": "images/gallery/life/team_20231013_2.jpg",
+    "format": "JPEG",
+    "before_bytes": 3650268,
+    "before_size": "4032x3024",
+    "after_size": "1800x1350",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 685571
+  },
+  {
+    "path": "images/gallery/life/team_horizontal_2025.jpg",
+    "format": "JPEG",
+    "before_bytes": 350166,
+    "before_size": "2400x1628",
+    "after_size": "1800x1221",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 248985
+  },
+  {
+    "path": "images/gallery/life/tour_20240518.jpg",
+    "format": "JPEG",
+    "before_bytes": 781405,
+    "before_size": "1619x1080",
+    "after_size": "1619x1080",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 554480
+  },
+  {
+    "path": "images/gallery/life/yard.jpg",
+    "format": "JPEG",
+    "before_bytes": 3929955,
+    "before_size": "3648x2736",
+    "after_size": "1800x1350",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 666388
+  },
+  {
+    "path": "images/gallery/science/2.png",
+    "format": "PNG",
+    "before_bytes": 1381618,
+    "before_size": "1080x1080",
+    "after_size": "1080x1080",
+    "max_edge": 1600,
+    "quality": 90,
+    "after_bytes": 1083774
+  },
+  {
+    "path": "images/gallery/science/3.png",
+    "format": "PNG",
+    "before_bytes": 2443946,
+    "before_size": "1080x1080",
+    "after_size": "1080x1080",
+    "max_edge": 1600,
+    "quality": 90,
+    "after_bytes": 2111612
+  },
+  {
+    "path": "images/gallery/science/iDISCO.jpg",
+    "format": "JPEG",
+    "before_bytes": 129273,
+    "before_size": "1786x1080",
+    "after_size": "1600x968",
+    "max_edge": 1600,
+    "quality": 90,
+    "after_bytes": 141812
+  },
+  {
+    "path": "images/gallery/science/VTA-1.jpg",
+    "format": "JPEG",
+    "before_bytes": 415735,
+    "before_size": "2617x1080",
+    "after_size": "1600x660",
+    "max_edge": 1600,
+    "quality": 90,
+    "after_bytes": 236729
+  },
+  {
+    "path": "images/home/4.jpg",
+    "format": "JPEG",
+    "before_bytes": 3896361,
+    "before_size": "2888x3849",
+    "after_size": "1201x1600",
+    "max_edge": 1600,
+    "quality": 85,
+    "after_bytes": 559868
+  },
+  {
+    "path": "images/home/team_horizontal.jpg",
+    "format": "JPEG",
+    "before_bytes": 27739565,
+    "before_size": "6720x4480",
+    "after_size": "2400x1600",
+    "max_edge": 2400,
+    "quality": 84,
+    "after_bytes": 407434
+  },
+  {
+    "path": "images/home/team_horizontal_2025.jpg",
+    "format": "JPEG",
+    "before_bytes": 23257581,
+    "before_size": "6720x4558",
+    "after_size": "3000x2035",
+    "max_edge": 3000,
+    "quality": 84,
+    "after_bytes": 570337
+  },
+  {
+    "path": "images/home/team_vertical.png",
+    "format": "PNG",
+    "before_bytes": 9761101,
+    "before_size": "3000x4000",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 85,
+    "after_bytes": 1297977
+  },
+  {
+    "path": "images/home/team_vertical_2025.jpg",
+    "format": "JPEG",
+    "before_bytes": 4353717,
+    "before_size": "6396x8528",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 85,
+    "after_bytes": 149340
+  },
+  {
+    "path": "images/news/20241024/1.jpg",
+    "format": "JPEG",
+    "before_bytes": 5981397,
+    "before_size": "4096x3072",
+    "after_size": "1800x1350",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 546290
+  },
+  {
+    "path": "images/news/20241024/2.jpg",
+    "format": "JPEG",
+    "before_bytes": 5678339,
+    "before_size": "4096x3072",
+    "after_size": "1800x1350",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 475622
+  },
+  {
+    "path": "images/news/20241122/1.jpg",
+    "format": "JPEG",
+    "before_bytes": 2804404,
+    "before_size": "4096x2304",
+    "after_size": "1800x1013",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 381889
+  },
+  {
+    "path": "images/news/20241122/2.png",
+    "format": "PNG",
+    "before_bytes": 5117960,
+    "before_size": "2092x1177",
+    "after_size": "1800x1013",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 2292292
+  },
+  {
+    "path": "images/news/20241122/3.jpg",
+    "format": "JPEG",
+    "before_bytes": 3918557,
+    "before_size": "4096x2304",
+    "after_size": "1800x1013",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 417798
+  },
+  {
+    "path": "images/news/20250426/bianlab.jpg",
+    "format": "JPEG",
+    "before_bytes": 772422,
+    "before_size": "3000x1687",
+    "after_size": "1800x1012",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 392148
+  },
+  {
+    "path": "images/news/20250426/joint_photo.jpg",
+    "format": "JPEG",
+    "before_bytes": 761712,
+    "before_size": "3000x1688",
+    "after_size": "1800x1013",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 398023
+  },
+  {
+    "path": "images/news/co_birthday_party.jpg",
+    "format": "JPEG",
+    "before_bytes": 6679704,
+    "before_size": "6000x4000",
+    "after_size": "1800x1200",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 295992
+  },
+  {
+    "path": "images/news/news_header.jpg",
+    "format": "JPEG",
+    "before_bytes": 3513325,
+    "before_size": "5472x3247",
+    "after_size": "1800x1068",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 479262
+  },
+  {
+    "path": "images/news/wurui.jpg",
+    "format": "JPEG",
+    "before_bytes": 3513325,
+    "before_size": "5472x3247",
+    "after_size": "1800x1068",
+    "max_edge": 1800,
+    "quality": 85,
+    "after_bytes": 479262
+  },
+  {
+    "path": "images/publication/NB paper.png",
+    "format": "PNG",
+    "before_bytes": 755333,
+    "before_size": "1475x767",
+    "after_size": "1475x767",
+    "max_edge": 1600,
+    "quality": 90,
+    "after_bytes": 594428
+  },
+  {
+    "path": "images/publication/NN paper GA.png",
+    "format": "PNG",
+    "before_bytes": 805113,
+    "before_size": "1851x1740",
+    "after_size": "1600x1504",
+    "max_edge": 1600,
+    "quality": 90,
+    "after_bytes": 700884
+  },
+  {
+    "path": "images/publication/publication_header.png",
+    "format": "PNG",
+    "before_bytes": 5171947,
+    "before_size": "4001x2252",
+    "after_size": "2400x1351",
+    "max_edge": 2400,
+    "quality": 90,
+    "after_bytes": 3672178
+  },
+  {
+    "path": "images/publication/Sleep paper GA.png",
+    "format": "PNG",
+    "before_bytes": 1331852,
+    "before_size": "4854x4159",
+    "after_size": "1600x1371",
+    "max_edge": 1600,
+    "quality": 90,
+    "after_bytes": 534866
+  },
+  {
+    "path": "images/publication/Spine competition.jpg",
+    "format": "JPEG",
+    "before_bytes": 741549,
+    "before_size": "4400x2475",
+    "after_size": "1600x900",
+    "max_edge": 1600,
+    "quality": 90,
+    "after_bytes": 172258
+  },
+  {
+    "path": "images/research/Dev sleep function.jpg",
+    "format": "JPEG",
+    "before_bytes": 248553,
+    "before_size": "2872x859",
+    "after_size": "2400x718",
+    "max_edge": 2400,
+    "quality": 85,
+    "after_bytes": 123671
+  },
+  {
+    "path": "images/research/Dev sleep regulation.jpg",
+    "format": "JPEG",
+    "before_bytes": 342693,
+    "before_size": "3389x1011",
+    "after_size": "2400x716",
+    "max_edge": 2400,
+    "quality": 85,
+    "after_bytes": 144519
+  },
+  {
+    "path": "images/research/Method-3.png",
+    "format": "PNG",
+    "before_bytes": 599796,
+    "before_size": "2136x1216",
+    "after_size": "2136x1216",
+    "max_edge": 2400,
+    "quality": 85,
+    "after_bytes": 591060
+  },
+  {
+    "path": "images/research/research_header.jpg",
+    "format": "JPEG",
+    "before_bytes": 1458196,
+    "before_size": "4294x1176",
+    "after_size": "2400x657",
+    "max_edge": 2400,
+    "quality": 85,
+    "after_bytes": 306976
+  },
+  {
+    "path": "images/slider/slider-bg-1.jpg",
+    "format": "JPEG",
+    "before_bytes": 2010133,
+    "before_size": "4294x1773",
+    "after_size": "3000x1239",
+    "max_edge": 3000,
+    "quality": 84,
+    "after_bytes": 621200
+  },
+  {
+    "path": "images/slider/slider-bg-2.jpg",
+    "format": "JPEG",
+    "before_bytes": 2008378,
+    "before_size": "4029x2268",
+    "after_size": "3000x1689",
+    "max_edge": 3000,
+    "quality": 84,
+    "after_bytes": 771061
+  },
+  {
+    "path": "images/slider/slider-bg-4.jpg",
+    "format": "JPEG",
+    "before_bytes": 2060059,
+    "before_size": "2888x2001",
+    "after_size": "2888x2001",
+    "max_edge": 3000,
+    "quality": 84,
+    "after_bytes": 1623029
+  },
+  {
+    "path": "images/team/batingyue.jpg",
+    "format": "JPEG",
+    "before_bytes": 3257807,
+    "before_size": "2780x3708",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 264082
+  },
+  {
+    "path": "images/team/jinrutan.jpg",
+    "format": "JPEG",
+    "before_bytes": 3480181,
+    "before_size": "2976x3968",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 302469
+  },
+  {
+    "path": "images/team/lechizhang.jpg",
+    "format": "JPEG",
+    "before_bytes": 455775,
+    "before_size": "1600x2134",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 242103
+  },
+  {
+    "path": "images/team/mulongyun.jpg",
+    "format": "JPEG",
+    "before_bytes": 262127,
+    "before_size": "1279x1705",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 228503
+  },
+  {
+    "path": "images/team/nijiaying.jpg",
+    "format": "JPEG",
+    "before_bytes": 545366,
+    "before_size": "1536x2048",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 297071
+  },
+  {
+    "path": "images/team/ruimingchai.jpg",
+    "format": "JPEG",
+    "before_bytes": 319798,
+    "before_size": "1469x1959",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 186919
+  },
+  {
+    "path": "images/team/ruiwang.jpg",
+    "format": "JPEG",
+    "before_bytes": 743148,
+    "before_size": "1517x2023",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 442780
+  },
+  {
+    "path": "images/team/shuchengwang2.jpg",
+    "format": "JPEG",
+    "before_bytes": 566729,
+    "before_size": "1280x1706",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 550035
+  },
+  {
+    "path": "images/team/team_header.jpg",
+    "format": "JPEG",
+    "before_bytes": 2763128,
+    "before_size": "4031x2162",
+    "after_size": "2400x1287",
+    "max_edge": 2400,
+    "quality": 82,
+    "after_bytes": 800866
+  },
+  {
+    "path": "images/team/tianyiwang.jpg",
+    "format": "JPEG",
+    "before_bytes": 178747,
+    "before_size": "1440x1920",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 291433
+  },
+  {
+    "path": "images/team/tianyiwang_2.jpg",
+    "format": "JPEG",
+    "before_bytes": 203060,
+    "before_size": "1916x2554",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 234212
+  },
+  {
+    "path": "images/team/wangyiyang.jpg",
+    "format": "JPEG",
+    "before_bytes": 4313209,
+    "before_size": "3072x4096",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 443514
+  },
+  {
+    "path": "images/team/weiyundeng.jpg",
+    "format": "JPEG",
+    "before_bytes": 1888433,
+    "before_size": "2268x3024",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 549040
+  },
+  {
+    "path": "images/team/yatingli.jpg",
+    "format": "JPEG",
+    "before_bytes": 7673519,
+    "before_size": "3000x4000",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 613870
+  },
+  {
+    "path": "images/team/yihuayao.jpg",
+    "format": "JPEG",
+    "before_bytes": 300225,
+    "before_size": "1807x2409",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 133509
+  },
+  {
+    "path": "images/team/yihuayao_1.jpg",
+    "format": "JPEG",
+    "before_bytes": 329692,
+    "before_size": "1409x1879",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 224459
+  },
+  {
+    "path": "images/team/yihuayao_2.jpg",
+    "format": "JPEG",
+    "before_bytes": 1394842,
+    "before_size": "2268x3024",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 460582
+  },
+  {
+    "path": "images/team/yuanfang.jpg",
+    "format": "JPEG",
+    "before_bytes": 389609,
+    "before_size": "1280x1706",
+    "after_size": "1200x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 220230
+  },
+  {
+    "path": "images/team/yunyueli.jpg",
+    "format": "JPEG",
+    "before_bytes": 18272385,
+    "before_size": "3987x5253",
+    "after_size": "1214x1600",
+    "max_edge": 1600,
+    "quality": 88,
+    "after_bytes": 528705
+  }
+]
