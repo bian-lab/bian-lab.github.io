@@ -19,7 +19,7 @@ images/             Photos and figures
 sources/            Publication PDFs
 css/style.css       Site styles
 js/script.js        Slider, filter, lightbox and preloader setup
-js/lazy-bg.js       Defers header and non-first hero backgrounds
+js/lazy-bg.js       Defers page-header backgrounds
 plugins/            Vendored front-end libraries
 ```
 
@@ -40,7 +40,7 @@ Day-to-day content is edited directly in HTML. To keep the layout consistent, us
 - News and Life gallery images: 4:3, 1600×1200.
 - Science and art figures: preserve the original aspect ratio and all labels; never crop.
 - For new content, keep the source image until the web copy is approved. When replacing an existing file, retain a `.bak` unless the user explicitly approves dropping the original.
-- Content images use native `loading="lazy"` and `decoding="async"`; navigation logos stay eager. Header backgrounds use `data-bg`; non-first hero slides use `data-bg-deferred`.
+- Content images use native `loading="lazy"` and `decoding="async"`; navigation logos stay eager. Header backgrounds use `data-bg`; hero slides stay eager because they are first-screen content.
 - Check the page locally, then run `python _content-kit/check_site.py` before committing.
 
 ## Local preview

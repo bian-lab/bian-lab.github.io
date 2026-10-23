@@ -1,28 +1,55 @@
 /**
  * Lightweight background-image loader.
  *
- * - data-bg: load when the element approaches the viewport.
- * - data-bg-deferred: load after the page's load event (used for non-first
- *   hero slides, so the first screen is not competing with them).
- *
- * No timers, no artificial bandwidth limits: the browser decides priority.
+ * Elements marked with data-bg are loaded when they approach the viewport.
+ * Above-the-fold headers are started on the next animation frame, so the page
+ * text can paint first without waiting for the image. No timers and no
+ * artificial bandwidth limits: the browser decides the actual priority.
  */
 (function () {
   'use strict';
 
-  function setBackground(element, attribute) {
-    var source = element.getAttribute(attribute);
+  function setBackground(element) {
+    var source = element.getAttribute('data-bg');
     if (!source) {
       return;
     }
     element.style.backgroundImage = 'url("' + source.replace(/"/g, '\\"') + '")';
-    element.removeAttribute(attribute);
+    element.removeAttribute('data-bg');
   }
 
-  var lazyElements = document.querySelectorAll('[data-bg]');
-  var deferredElements = document.querySelectorAll('[data-bg-deferred]');
+  function isNearViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return rect.top < window.innerHeight + 200 && rect.bottom > -200;
+  }
 
-  if (!lazyElements.length && !deferredElements.length) {
+  var lazyElements = Array.prototype.slice.call(document.querySelectorAll('[data-bg]'));
+  if (!lazyElements.length) {
+    return;
+  }
+
+  var nearElements = [];
+  var farElements = [];
+
+  lazyElements.forEach(function (element) {
+    if (isNearViewport(element)) {
+      nearElements.push(element);
+    } else {
+      farElements.push(element);
+    }
+  });
+
+  function loadNearElements() {
+    nearElements.forEach(setBackground);
+  }
+
+  if (window.requestAnimationFrame) {
+    window.requestAnimationFrame(loadNearElements);
+  } else {
+    loadNearElements();
+  }
+
+  if (!farElements.length) {
     return;
   }
 
@@ -30,30 +57,16 @@
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          setBackground(entry.target, 'data-bg');
+          setBackground(entry.target);
           observer.unobserve(entry.target);
         }
       });
     }, { rootMargin: '200px 0px' });
 
-    Array.prototype.forEach.call(lazyElements, function (element) {
+    farElements.forEach(function (element) {
       observer.observe(element);
     });
   } else {
-    Array.prototype.forEach.call(lazyElements, function (element) {
-      setBackground(element, 'data-bg');
-    });
-  }
-
-  function loadDeferred() {
-    Array.prototype.forEach.call(document.querySelectorAll('[data-bg-deferred]'), function (element) {
-      setBackground(element, 'data-bg-deferred');
-    });
-  }
-
-  if (document.readyState === 'complete') {
-    loadDeferred();
-  } else {
-    window.addEventListener('load', loadDeferred);
+    farElements.forEach(setBackground);
   }
 })();
