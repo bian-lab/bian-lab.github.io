@@ -57,4 +57,6 @@ Then open <http://localhost:8000/>.
 
 GitHub Pages publishes `master` automatically at <https://bianlab.site>. The custom domain is set in `CNAME`.
 
+Before publishing, open the changed page in a visible browser window for review. Commit and push only after the user explicitly says to upload.
+
 The repository is configured with a dedicated SSH key through a repo-local `core.sshCommand`; other Git repositories are unaffected.
